@@ -1,1 +1,16 @@
+- var navValues = ['Курсы', 'О нас', 'Блог', 'Еще'];
+
 header.header
+	a(href="#")
+		img(src="#" alt="Языковая школа")
+	nav.nav
+		ul
+			each value in navValues
+				li
+					a(href="#")
+						#{value}
+			button(type="button")
+				|*КНОПКА*
+	a(href="#")
+		span
+			|Войти
