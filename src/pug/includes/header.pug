@@ -1,16 +1,12 @@
-- var navValues = ['Курсы', 'О нас', 'Блог', 'Еще'];
-
-header.header
+header.header.container
 	a(href="#")
-		img(src="#" alt="Языковая школа")
-	nav.nav
-		ul
-			each value in navValues
-				li
-					a(href="#")
-						#{value}
-			button(type="button")
-				|*КНОПКА*
+		img(src="./img/static/header-logo.svg" width="96" height="32" alt="Языковая школа" aria-hidden="true")
 	a(href="#")
 		span
 			|Войти
+	button(type="button")
+		span.visually-hidden Открыть меню
+		span
+			+icon(30, 24, 'burger-menu-closed')
+		span
+			+icon(30, 24, 'burger-menu-opened')
