@@ -1,12 +1,19 @@
-header.header.container
-	a(href="#")
-		img(src="./img/static/header-logo.svg" width="96" height="32" alt="Языковая школа" aria-hidden="true")
-	a(href="#")
-		span
-			|Войти
-	button(type="button")
-		span.visually-hidden Открыть меню
-		span
-			+icon(30, 24, 'burger-menu-closed')
-		span
-			+icon(30, 24, 'burger-menu-opened')
+header.header
+	.header__container.container
+		a.header__logo(href="#")
+			img(src="./img/static/header-logo.svg" width="96" height="32" alt="Языковая школа" aria-hidden="true")
+		a.header__login(href="#")
+			span
+				|Войти
+		nav.header__nav.nav
+			button.nav__menu(type="button")
+				span.visually-hidden Открыть меню
+				.nav__menu-closed
+					+icon(30, 24, 'burger-menu-closed')
+				.nav__menu-opened.visually-hidden
+					+icon(30, 24, 'burger-menu-opened')
+			.nav__list-container.visually-hidden
+				ul.nav__list
+					each link in headerData.navigation
+						li.nav__item
+							a.nav__link(href=link.href)!= link.text

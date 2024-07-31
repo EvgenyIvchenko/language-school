@@ -164,37 +164,51 @@ template {
 }
 
 @font-face {
-  src: url("../fonts/montserrat-400.woff2") format("woff2"), url("../fonts/montserrat-400.woff") format("woff");
-  font-family: "Montserrat";
+  src: url("../fonts/gilroy-black-900.woff2") format("woff2"), url("../fonts/gilroy-black-900.woff") format("woff");
+  font-family: "Gilroy";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  src: url("../fonts/gilroy-bold-700.woff2") format("woff2"), url("../fonts/gilroy-bold-700.woff") format("woff");
+  font-family: "Gilroy";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  src: url("../fonts/gilroy-semibold-600.woff2") format("woff2"), url("../fonts/gilroy-semibold-600.woff") format("woff");
+  font-family: "Gilroy";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  src: url("../fonts/gilroy-medium-500.woff2") format("woff2"), url("../fonts/gilroy-medium-500.woff") format("woff");
+  font-family: "Gilroy";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  src: url("../fonts/gilroy-regular-400.woff2") format("woff2"), url("../fonts/gilroy-regular-400.woff") format("woff");
+  font-family: "Gilroy";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  src: url("../fonts/montserrat-600.woff2") format("woff2"), url("../fonts/montserrat-600.woff") format("woff");
-  font-family: "Montserrat";
+  src: url("../fonts/lato-semibold-600.woff2") format("woff2"), url("../fonts/lato-semibold-600.woff") format("woff");
+  font-family: "Lato";
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  src: url("../fonts/montserrat-700.woff2") format("woff2"), url("../fonts/montserrat-700.woff") format("woff");
-  font-family: "Montserrat";
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  src: url("../fonts/mulish-600.woff2") format("woff2"), url("../fonts/mulish-600.woff") format("woff");
-  font-family: "Mulish";
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  src: url("../fonts/mulish-700.woff2") format("woff2"), url("../fonts/mulish-700.woff") format("woff");
-  font-family: "Mulish";
-  font-weight: 700;
+  src: url("../fonts/lato-medium-500.woff2") format("woff2"), url("../fonts/lato-medium-500.woff") format("woff");
+  font-family: "Lato";
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -357,7 +371,13 @@ dl {
   overflow-anchor: none;
   margin: 0;
   min-height: 100dvh;
+  font-family: Gilroy, sans-serif;
+  font-weight: 500;
+  font-style: normal;
   font-feature-settings: "pnum" on, "lnum" on;
+  font-size: 16px;
+  color: var(--text);
+  background-color: #fff;
   overscroll-behavior: none;
 }
 
@@ -380,16 +400,162 @@ input[type=radio].visually-hidden {
 .container {
   display: grid;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
   width: 100%;
-  max-width: 288px;
+  min-width: 320px;
+}
+@media (min-width: 768px) and (max-width: 1919px) {
+  .container {
+    padding: 0 32px;
+  }
 }
 
 .header {
+  display: grid;
+  justify-content: center;
+}
+
+.header__container {
+  position: fixed;
+  z-index: 2;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid var(--purple-secondry);
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+@media (min-width: 768px) and (max-width: 1919px) {
+  .header__container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.header__logo img {
+  width: 96px;
+  height: 32px;
+}
+@media (min-width: 768px) and (max-width: 1919px) {
+  .header__logo img {
+    width: 120px;
+    height: 40px;
+  }
+}
+
+.header__login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
+  border-radius: 8px;
+  padding: 6px 12px;
+  width: 64px;
+  height: 36px;
+  font-size: 14px;
+  line-height: 171%;
+  letter-spacing: 0.01em;
+  color: var(--color-text-alternate);
+  background: var(--purple);
+}
+@media (min-width: 768px) and (max-width: 1919px) {
+  .header__login {
+    margin-right: 32px;
+    padding: 12px 18px;
+    width: 82px;
+    height: 48px;
+    font-weight: 600;
+    font-size: 16px;
+  }
 }
 
 .main {
   flex: 1 0 auto;
+}
+
+.main__container {
+  margin-top: 61px;
+  padding-top: 64px;
+}
+
+.nav__list-container {
+  position: absolute;
+  top: 61px;
+  left: 0;
+  z-index: 1;
+  overflow-y: scroll;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-text-alternate);
+}
+@media (min-width: 768px) and (max-width: 1919px) {
+  .nav__list-container {
+    top: 81px;
+  }
+}
+
+.nav__menu {
+  display: grid;
+}
+
+.nav__menu svg {
+  fill: var(--purple);
+}
+
+.nav__menu-closed {
+  display: grid;
+}
+
+.nav__menu-opened {
+  display: grid;
+}
+
+.nav__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: var(--title);
+  background-color: var(--color-text-alternate);
+}
+@media (min-width: 768px) and (max-width: 1919px) {
+  .nav__list {
+    padding: 0 32px;
+    font-size: 36px;
+    line-height: 128%;
+  }
+}
+
+.nav__item {
+  border-bottom: 1px solid var(--purple-secondry);
+  padding: 8px 15px;
+}
+
+.nav__item:nth-child(1),
+.nav__item:nth-child(4) {
+  padding-top: 40px;
+}
+@media (min-width: 768px) and (max-width: 1919px) {
+  .nav__item:nth-child(1),
+  .nav__item:nth-child(4) {
+    padding-top: 72px;
+  }
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.main__container {
+  margin-top: 61px;
+  padding-top: 64px;
 }

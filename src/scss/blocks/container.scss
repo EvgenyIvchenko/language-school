@@ -1,7 +1,11 @@
 .container {
 	display: grid;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 16px;
 	width: 100%;
-	max-width: 288px;
+	min-width: 320px;
+
+	@include tablet {
+		padding: 0 32px;
+	}
 }

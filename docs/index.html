@@ -21,16 +21,47 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
-    <header class="header container"><a href="#"><img src="./img/static/header-logo.svg" width="96" height="32" alt="Языковая школа" aria-hidden="true"></a><a href="#"><span>Войти</span></a>
-      <button type="button"><span class="visually-hidden">Открыть меню</span><span>
-              <svg width="30" height="24" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#burger-menu-closed"></use>
-              </svg></span><span>
-              <svg width="30" height="24" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#burger-menu-opened"></use>
-              </svg></span></button>
+    <header class="header">
+      <div class="header__container container"><a class="header__logo" href="#"><img src="./img/static/header-logo.svg" width="96" height="32" alt="Языковая школа" aria-hidden="true"></a><a class="header__login" href="#"><span>Войти</span></a>
+        <nav class="header__nav nav">
+          <button class="nav__menu" type="button"><span class="visually-hidden">Открыть меню</span>
+            <div class="nav__menu-closed">
+                  <svg width="30" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#burger-menu-closed"></use>
+                  </svg>
+            </div>
+            <div class="nav__menu-opened visually-hidden">
+                  <svg width="30" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#burger-menu-opened"></use>
+                  </svg>
+            </div>
+          </button>
+          <div class="nav__list-container visually-hidden">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="#">Курсы</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">О нас</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Блог</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">FAQ</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Условия оплаты</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="main">
+      <section class="main__container container">
+        <div><img src="img/content/student.webp" width="288" height="200" alt="Ученик за ноутбуком"></div>
+        <p>Language to go</p>
+        <p>Онлайн-школа иностранных языков</p>
+        <p>Достигайте своих целей с помощью авторских игровых методик от носителей языка</p><a href="#">Попробовать бесплатно</a><a href="#">
+          <div>
+                <svg width="60" height="60" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#play-video"></use>
+                </svg>
+          </div>
+          <p>Посмотреть промо-ролик</p></a>
+      </section>
     </main>
     <footer class="footer"></footer>
     <script src="js/bundle.min.js"></script>
