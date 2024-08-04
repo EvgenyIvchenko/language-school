@@ -1,19 +1,27 @@
-header.header
-	.header__container.container
-		a.header__logo(href="#")
-			img(src="./img/static/header-logo.svg" width="96" height="32" alt="Языковая школа" aria-hidden="true")
-		a.header__login(href="#")
-			span
-				|Войти
-		nav.header__nav.nav
-			button.nav__menu(type="button")
-				span.visually-hidden Открыть меню
-				.nav__menu-closed
-					+icon(30, 24, 'burger-menu-closed')
-				.nav__menu-opened.visually-hidden
-					+icon(30, 24, 'burger-menu-opened')
-			.nav__list-container.visually-hidden
-				ul.nav__list
-					each link in headerData.navigation
-						li.nav__item
-							a.nav__link(href=link.href)!= link.text
+header.header.container.container--header
+	a.header__logo(href="#")
+		img(src="./img/static/header-logo.svg" width="96" height="32" alt="Языковая школа" aria-hidden="true")
+	.header__nav.nav
+		ul.nav__list
+			each link in headerData.navigation
+				if link.button
+					.nav__more
+						button.nav__more-button(type="button")!= link.button
+						.nav__more-icon
+							+icon(14, 8, 'more-icon')
+						ul.nav__list.nav__list--child
+							each item in link.list
+								li.nav__item
+									a.nav__link(href=item.href)!= item.text
+				else
+					li.nav__item.nav__item--parent
+						a.nav__link(href=link.href)!= link.text
+	a.header__login(href="#")
+		span
+			|Войти
+	button.nav__menu(type="button")
+		span.visually-hidden Открыть меню
+		.nav__menu-closed
+			+icon(30, 24, 'burger-menu-closed')
+		.nav__menu-opened.visually-hidden
+			+icon(30, 24, 'burger-menu-opened')

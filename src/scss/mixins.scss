@@ -1,7 +1,8 @@
-$desktop: 1920px;
-$tablet-max: 1919px;
+$desktop: 1540px;
+$tablet-max: 1539px;
 $tablet-min: 768px;
-$mobile: 767px;
+$tablet-above: 768px;
+$mobile-max: 767px;
 
 @mixin font($family, $style, $weight, $url) {
 	@font-face {
@@ -35,6 +36,18 @@ $mobile: 767px;
 	}
 }
 
+@mixin desktop-before {
+	@media (max-width: $tablet-max) {
+		@content;
+	}
+}
+
+@mixin tablet-above {
+	@media (min-width: $tablet-above) {
+		@content;
+	}
+}
+
 @mixin tablet {
 	@media (min-width: $tablet-min) and (max-width: $tablet-max) {
 		@content;
@@ -42,7 +55,7 @@ $mobile: 767px;
 }
 
 @mixin mobile {
-	@media (max-width: $mobile) {
+	@media (max-width: $mobile-max) {
 		@content;
 	}
 }

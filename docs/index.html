@@ -21,33 +21,39 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
-    <header class="header">
-      <div class="header__container container"><a class="header__logo" href="#"><img src="./img/static/header-logo.svg" width="96" height="32" alt="Языковая школа" aria-hidden="true"></a><a class="header__login" href="#"><span>Войти</span></a>
-        <nav class="header__nav nav">
-          <button class="nav__menu" type="button"><span class="visually-hidden">Открыть меню</span>
-            <div class="nav__menu-closed">
-                  <svg width="30" height="24" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#burger-menu-closed"></use>
+    <header class="header container container--header"><a class="header__logo" href="#"><img src="./img/static/header-logo.svg" width="96" height="32" alt="Языковая школа" aria-hidden="true"></a>
+      <div class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--parent"><a class="nav__link" href="#">Курсы</a></li>
+          <li class="nav__item nav__item--parent"><a class="nav__link" href="#">О нас</a></li>
+          <li class="nav__item nav__item--parent"><a class="nav__link" href="#">Блог</a></li>
+          <div class="nav__more">
+            <button class="nav__more-button" type="button">Еще</button>
+            <div class="nav__more-icon">
+                  <svg width="14" height="8" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#more-icon"></use>
                   </svg>
             </div>
-            <div class="nav__menu-opened visually-hidden">
-                  <svg width="30" height="24" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#burger-menu-opened"></use>
-                  </svg>
-            </div>
-          </button>
-          <div class="nav__list-container visually-hidden">
-            <ul class="nav__list">
-              <li class="nav__item"><a class="nav__link" href="#">Курсы</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">О нас</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Блог</a></li>
+            <ul class="nav__list nav__list--child">
               <li class="nav__item"><a class="nav__link" href="#">FAQ</a></li>
               <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
               <li class="nav__item"><a class="nav__link" href="#">Условия оплаты</a></li>
             </ul>
           </div>
-        </nav>
-      </div>
+        </ul>
+      </div><a class="header__login" href="#"><span>Войти</span></a>
+      <button class="nav__menu" type="button"><span class="visually-hidden">Открыть меню</span>
+        <div class="nav__menu-closed">
+              <svg width="30" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#burger-menu-closed"></use>
+              </svg>
+        </div>
+        <div class="nav__menu-opened visually-hidden">
+              <svg width="30" height="24" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#burger-menu-opened"></use>
+              </svg>
+        </div>
+      </button>
     </header>
     <main class="main">
       <section class="main__container container">
