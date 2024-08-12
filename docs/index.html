@@ -21,25 +21,29 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
-    <header class="header container container--header"><a class="header__logo" href="#"><img src="./img/static/header-logo.svg" width="96" height="32" alt="Языковая школа" aria-hidden="true"></a>
+    <header class="header container container--header"><a class="header__logo" href="#">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/static/header-logo-tablet.svg" width="120" height="40"><img src="./img/static/header-logo-mobile.svg" width="96" height="32" alt="Языковая школа" aria-hidden="true">
+        </picture></a>
       <div class="header__nav nav">
         <ul class="nav__list">
           <li class="nav__item nav__item--parent"><a class="nav__link" href="#">Курсы</a></li>
           <li class="nav__item nav__item--parent"><a class="nav__link" href="#">О нас</a></li>
           <li class="nav__item nav__item--parent"><a class="nav__link" href="#">Блог</a></li>
-          <div class="nav__more">
-            <button class="nav__more-button" type="button">Еще</button>
-            <div class="nav__more-icon">
-                  <svg width="14" height="8" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#more-icon"></use>
-                  </svg>
-            </div>
+          <li class="nav__more nav__item--parent">
+            <button class="nav__more-button" type="button">Еще
+              <div class="nav__more-icon">
+                    <svg width="14" height="8" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#more-icon"></use>
+                    </svg>
+              </div>
+            </button>
             <ul class="nav__list nav__list--child">
-              <li class="nav__item"><a class="nav__link" href="#">FAQ</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Условия оплаты</a></li>
+              <li class="nav__item nav__item--child"><a class="nav__link nav__link--child" href="#">FAQ</a></li>
+              <li class="nav__item nav__item--child"><a class="nav__link nav__link--child" href="#">Контакты</a></li>
+              <li class="nav__item nav__item--child"><a class="nav__link nav__link--child" href="#">Условия оплаты</a></li>
             </ul>
-          </div>
+          </li>
         </ul>
       </div><a class="header__login" href="#"><span>Войти</span></a>
       <button class="nav__menu" type="button"><span class="visually-hidden">Открыть меню</span>

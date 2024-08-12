@@ -1,18 +1,20 @@
 header.header.container.container--header
 	a.header__logo(href="#")
-		img(src="./img/static/header-logo.svg" width="96" height="32" alt="Языковая школа" aria-hidden="true")
+		picture
+			source(media="(min-width: 768px)" srcset="./img/static/header-logo-tablet.svg" width="120" height="40")
+			img(src="./img/static/header-logo-mobile.svg" width="96" height="32" alt="Языковая школа" aria-hidden="true")
 	.header__nav.nav
 		ul.nav__list
 			each link in headerData.navigation
 				if link.button
-					.nav__more
+					li.nav__more.nav__item--parent
 						button.nav__more-button(type="button")!= link.button
-						.nav__more-icon
-							+icon(14, 8, 'more-icon')
+							.nav__more-icon
+								+icon(14, 8, 'more-icon')
 						ul.nav__list.nav__list--child
 							each item in link.list
-								li.nav__item
-									a.nav__link(href=item.href)!= item.text
+								li.nav__item.nav__item--child
+									a.nav__link.nav__link--child(href=item.href)!= item.text
 				else
 					li.nav__item.nav__item--parent
 						a.nav__link(href=link.href)!= link.text

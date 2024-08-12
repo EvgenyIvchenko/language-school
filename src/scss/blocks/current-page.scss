@@ -1,0 +1,6 @@
+.current-page {
+	@include desktop {
+		border-bottom: 2px solid var(--purple-active);
+		color: var(--purple-hover);
+	}
+}

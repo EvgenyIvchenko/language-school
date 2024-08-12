@@ -1,3 +1,5 @@
+/* stylelint-disable indentation */
+/* stylelint-disable order/order */
 .nav {
 	position: absolute;
 	top: 61px;
@@ -10,7 +12,7 @@
 	height: 100vh;
 	background-color: var(--color-text-alternate);
 
-	@include tablet {
+	@include tablet-above {
 		top: 81px;
 	}
 
@@ -18,6 +20,7 @@
 		position: static;
 		align-items: center;
 		justify-content: start;
+		overflow-y: hidden;
 		margin-right: auto;
 		width: auto;
 		height: auto;
@@ -28,13 +31,13 @@
 .nav__menu {
 	display: grid;
 
+	& svg {
+		fill: var(--purple);
+	}
+
 	@include desktop {
 		display: none;
 	}
-}
-
-.nav__menu svg {
-	fill: var(--purple);
 }
 
 .nav__menu-closed {
@@ -49,7 +52,7 @@
 	width: 100%;
 	text-align: left;
 
-	@include tablet {
+  @include tablet-above {
 		padding: 0 32px;
 	}
 
@@ -58,25 +61,129 @@
 		align-items: center;
 		justify-content: space-between;
 		text-align: center;
+		background: var(--color-text-alternate);
 		gap: 15px;
+	}
+
+	&--child {
+    display: flex;
+	flex-direction: column;
+
+		@include tablet-above {
+			padding: 0;
+		}
+
+		@include desktop {
+      		position: absolute;
+			top: 86px;
+			left: 410px;
+			display: none;
+			// display: flex;
+			flex-direction: column;
+			border-radius: 5px;
+			padding: 4px 0;
+			width: auto;
+			min-width: 194px;
+			box-shadow: 0 0 15px 0 rgb(0 0 0 / 15%);
+			text-align: left;
+			gap: 0;
+			pointer-events: auto;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: -4px;
+				left: 50%;
+				width: 24px;
+				height: 24px;
+				// box-shadow: 0 0 15px 0 rgb(0 0 0 / 15%);
+				background-color: #fff;
+				transform: rotate(45deg) translateX(-50%);
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: -19px;
+				left: 0;
+				width: 100%;
+				height: 20px;
+				background: transparent;
+			}
+		}
+	}
+}
+
+.nav__more:hover .nav__list--child {
+	@include desktop {
+	  display: flex;
 	}
 }
 
 .nav__item {
 	border-bottom: 1px solid var(--purple-secondry);
-	padding: 8px 0;
+  	display: flex;
 
 	@include desktop {
 		border: none;
-		padding: 10 0;
 		min-width: 66px;
+		transition: color .3s;
 	}
-}
 
-@include desktop-before {
-	.nav__item:nth-child(1),
-	.nav__item:nth-child(4) {
-		padding-top: 40px;
+	@include hover {
+		color: var(--purple-hover);
+	}
+
+	&:active {
+		@include desktop {
+			color: var(--purple-active);
+		}
+	}
+
+	&--parent {
+		transition:
+			color .3s,
+			border-color .3s;
+
+		@include desktop {
+			border-bottom: 2px solid transparent;
+		}
+
+		@include hover {
+			color: var(--purple-hover);
+		}
+
+		&:active {
+			@include desktop {
+				border-color: var(--purple-active);
+			}
+		}
+	}
+
+	&--child {
+		&:not(:last-child) {
+			@include desktop {
+				border-bottom: 1px solid var(--purple-secondry);
+			}
+		}
+
+		@include desktop {
+			position: relative;
+			width: 100%;
+		}
+	}
+
+	&--current {
+		@include desktop {
+			border-bottom: 2px solid var(--purple-active);
+			color: var(--purple-active);
+		}
+	}
+
+	&:nth-child(1) a {
+		@include mobile {
+			padding-top: 40px;
+		}
 
 		@include tablet {
 			padding-top: 72px;
@@ -85,20 +192,49 @@
 }
 
 .nav__more {
+	// display: none;
+	display: flex;
+
+	@include desktop {
+		// position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px 15px;
+		max-height: 44px;
+		text-align: center;
+		cursor: pointer;
+
+		& svg {
+			transition: stroke .3s;
+		}
+	}
+
+	@include hover {
+		border-color: var(--purple-hover);
+
+		& svg {
+			stroke: var(--purple-hover);
+		}
+	}
+
+	&:active {
+		color: var(--purple-active);
+		border-color: var(--purple-active);
+
+		& svg {
+			stroke: var(--purple-active);
+		}
+	}
+}
+
+.nav__more-button {
 	display: none;
 
 	@include desktop {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		position: relative;
-		padding: 10px 15px;
-	}
-}
-
-.nav__more-button {
-	@include desktop {
-		margin-right: 5px;
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 150%;
@@ -106,43 +242,63 @@
 	}
 }
 
-.nav__more-icon {}
+.nav__more-icon {
+	@include desktop {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-left: 5px;
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.nav__more:hover .nav__more-icon {
+	padding-right: 5px;
+	padding-left: 0;
+	transform: rotate(180deg);
+}
 
 .nav__more-icon svg {
+	fill: none;
 	stroke: var(--title);
 	stroke-width: 2px;
 }
 
-.nav__list--child {
-	@include tablet {
-		padding: 0;
-	}
-
-	@include desktop {
-		// display: none;
-		display: flex;
-		flex-direction: column;
-		position: absolute;
-		top: 65px;
-		left: 0;
-		width: auto;
-	}
-}
-
 .nav__link {
+	padding: 8px 15px;
 	font-weight: 600;
 	font-size: 20px;
 	line-height: 130%;
 	letter-spacing: .01em;
 	color: var(--title);
+	width: 100%;
+	transition: color .3s;
 
-	@include tablet {
-		font-size: 36px;
-		line-height: 128%;
-	}
+  @include tablet-above {
+    font-size: 36px;
+    line-height: 128%;
+  }
 
-	@include desktop {
-		font-size: 16px;
-		line-height: 150%;
+  @include desktop {
+    padding: 10px 0;
+    font-size: 16px;
+    line-height: 150%;
+    width: 100%;
+  }
+
+  @include hover {
+	color: var(--purple-hover);
+  }
+
+  &:active {
+	color: var(--purple-active);
+  }
+
+	&--child {
+		@include desktop {
+			padding: 10px 15px;
+			background-color: #fff;
+		}
 	}
 }

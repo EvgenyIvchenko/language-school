@@ -8,7 +8,7 @@
 	padding-bottom: 12px;
 	width: 100%;
 
-	@include tablet {
+	@include tablet-above {
 		padding-top: 16px;
 		padding-bottom: 16px;
 	}
@@ -20,6 +20,9 @@
 }
 
 .header__logo {
+	display: flex;
+	align-items: middle;
+	justify-content: center;
 	margin-right: auto;
 
 	@include desktop {
@@ -27,7 +30,7 @@
 	}
 }
 
-.header__logo img {
+.header__logo svg {
 	width: 96px;
 	height: 32px;
 
@@ -50,9 +53,22 @@
 	line-height: 171%;
 	letter-spacing: .01em;
 	color: var(--color-text-alternate);
-	background: var(--purple);
+	background-color: var(--purple);
+	transition:
+		background-color .3s,
+		border-color .3s;
 
-	@include tablet {
+	&:active {
+		border: 2px solid var(--purple-focus);
+		background-color: var(--purple-active);
+	}
+
+	&:disabled {
+		border: 2px solid var(--grey-active);
+		background-color: var(--grey-active);
+	}
+
+	@include tablet-above {
 		margin-right: 32px;
 		padding: 12px 18px;
 		width: 82px;
@@ -64,6 +80,10 @@
 
 	@include desktop {
 		margin-right: 0;
+	}
+
+	@include hover {
+		background-color: var(--purple-hover);
 	}
 }
 

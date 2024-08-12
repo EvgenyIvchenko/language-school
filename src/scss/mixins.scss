@@ -1,7 +1,6 @@
 $desktop: 1540px;
 $tablet-max: 1539px;
 $tablet-min: 768px;
-$tablet-above: 768px;
 $mobile-max: 767px;
 
 @mixin font($family, $style, $weight, $url) {
@@ -18,13 +17,8 @@ $mobile-max: 767px;
 
 @mixin hover {
 	@media (hover: hover) {
-		&:hover {
-			@content;
-		}
-	}
-
-	@media (hover: none) {
-		&:active {
+		&:hover,
+		&:focus {
 			@content;
 		}
 	}
@@ -43,7 +37,7 @@ $mobile-max: 767px;
 }
 
 @mixin tablet-above {
-	@media (min-width: $tablet-above) {
+	@media (min-width: $tablet-min) {
 		@content;
 	}
 }
