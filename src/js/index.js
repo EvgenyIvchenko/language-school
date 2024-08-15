@@ -6,7 +6,6 @@ import { initLinkScroll } from './modules/init-link-scroll.js';
 import { initPhoneMask } from './modules/init-phone-mask.js';
 import { initPhoneHref } from './modules/init-phone-href.js';
 import { burgerMenu } from './modules/burger-menu.js';
-import { moreNavigation } from './modules/more-navigation.js';
 
 
 testSupportWebp();
@@ -15,4 +14,3 @@ initPhoneHref();
 initLinkScroll();
 initPhoneMask();
 burgerMenu();
-moreNavigation();

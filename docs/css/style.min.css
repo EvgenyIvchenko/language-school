@@ -728,6 +728,7 @@ body {
 .nav__item {
   border-bottom: 1px solid var(--purple-secondry);
   display: flex;
+  overflow-wrap: break-word;
 }
 @media (min-width: 1540px) {
   .nav__item {
@@ -804,6 +805,7 @@ body {
     max-height: 44px;
     text-align: center;
     cursor: pointer;
+    transition: color 0.3s, border-color 0.3s;
   }
   .nav__more svg {
     transition: stroke 0.3s;
@@ -811,6 +813,7 @@ body {
 }
 @media (hover: hover) {
   .nav__more:hover, .nav__more:focus {
+    color: var(--purple-hover);
     border-color: var(--purple-hover);
   }
   .nav__more:hover svg, .nav__more:focus svg {

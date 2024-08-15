@@ -185,6 +185,7 @@
 .nav__item {
 	border-bottom: 1px solid var(--purple-secondry);
   	display: flex;
+	overflow-wrap: break-word;
 
 	@include desktop {
 		border: none;
@@ -266,6 +267,9 @@
 		max-height: 44px;
 		text-align: center;
 		cursor: pointer;
+		transition:
+			color 0.3s,
+			border-color 0.3s;
 
 		& svg {
 			transition: stroke .3s;
@@ -273,6 +277,7 @@
 	}
 
 	@include hover {
+		color: var(--purple-hover);
 		border-color: var(--purple-hover);
 
 		& svg {
