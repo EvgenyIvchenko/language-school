@@ -11,19 +11,21 @@ header.header.container.container--header
 						button.nav__more-button(type="button")!= link.button
 							.nav__more-icon
 								+icon(14, 8, 'more-icon')
-						ul.nav__list.nav__list--child
+						ul.nav__list.nav__list--child.nav__list--open
 							each item in link.list
 								li.nav__item.nav__item--child
 									a.nav__link.nav__link--child(href=item.href)!= item.text
 				else
 					li.nav__item.nav__item--parent
 						a.nav__link(href=link.href)!= link.text
-	a.header__login(href="#")
+	button.header__login(href="#")
 		span
 			|Войти
 	button.nav__menu(type="button")
-		span.visually-hidden Открыть меню
-		.nav__menu-closed
-			+icon(30, 24, 'burger-menu-closed')
-		.nav__menu-opened.visually-hidden
-			+icon(30, 24, 'burger-menu-opened')
+		.nav__wrapper-menu
+			span
+		//- span.visually-hidden Открыть меню
+		//- .nav__menu-closed
+		//- 	+icon(30, 24, 'burger-menu-closed')
+		//- .nav__menu-opened.visually-hidden
+		//- 	+icon(30, 24, 'burger-menu-opened')

@@ -66,6 +66,11 @@
 	&:disabled {
 		border: 2px solid var(--grey-active);
 		background-color: var(--grey-active);
+		cursor: default;
+
+		&:hover {
+			background-color: var(--grey-active);
+		}
 	}
 
 	@include tablet-above {
@@ -87,4 +92,4 @@
 	}
 }
 
-.header__nav {}
+.header__nav {	}
