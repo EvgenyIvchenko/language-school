@@ -1,0 +1,15 @@
+mixin navigation(data)
+	nav.navigation&attributes(attributes)
+		ul.navigation__list
+			each link in data.navigation
+				if link.button
+					li.navigation__item.navigation__item--more
+						button.navigation__button(type="button")!= link.button
+							+icon(24, 24, "arrow-down")
+						ul.navigation__sub-list
+							each subLink in link.list
+								li.navigation__sub-item
+									a.navigation__sub-link(href=subLink.href)!= subLink.text
+				else
+					li.navigation__item
+						a.navigation__link(href=link.href)!= link.text

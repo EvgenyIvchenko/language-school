@@ -13,43 +13,41 @@
     <link rel="manifest" href="favicon/site.webmanifest">
     <title>Language to go</title>
     <meta name="description" content="сайт">
-    <link rel="preload" href="fonts/montserrat-400.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/montserrat-600.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/montserrat-700.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/mulish-600.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/mulish-700.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/gilroy-400.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/gilroy-500.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/gilroy-600.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/gilroy-700.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/gilroy-900.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/lato-500.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/lato-600.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
-    <header class="header container container--header"><a class="header__logo" href="#">
-        <picture>
-          <source media="(min-width: 768px)" srcset="./img/static/header-logo-tablet.svg" width="120" height="40"><img src="./img/static/header-logo-mobile.svg" width="96" height="32" alt="Языковая школа" aria-hidden="true">
-        </picture></a>
-      <div class="header__nav nav">
-        <ul class="nav__list">
-          <li class="nav__item nav__item--parent"><a class="nav__link" href="#">Курсы</a></li>
-          <li class="nav__item nav__item--parent"><a class="nav__link" href="#">О нас</a></li>
-          <li class="nav__item nav__item--parent"><a class="nav__link" href="#">Блог</a></li>
-          <li class="nav__more nav__item--parent">
-            <button class="nav__more-button" type="button">Еще
-              <div class="nav__more-icon">
-                    <svg width="14" height="8" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#more-icon"></use>
-                    </svg>
-              </div>
-            </button>
-            <ul class="nav__list nav__list--child nav__list--open">
-              <li class="nav__item nav__item--child"><a class="nav__link nav__link--child" href="#">FAQ</a></li>
-              <li class="nav__item nav__item--child"><a class="nav__link nav__link--child" href="#">Контакты</a></li>
-              <li class="nav__item nav__item--child"><a class="nav__link nav__link--child" href="#">Условия оплаты</a></li>
-            </ul>
-          </li>
-        </ul>
+    <header class="header">
+      <div class="header__container container container--header">
+        <div class="header__logo"><img src="./img/content/logo-header.svg" width="96" height="32" alt="Языковая школа"></div>
+            <nav class="navigation header__navigation">
+              <ul class="navigation__list">
+                <li class="navigation__item"><a class="navigation__link" href="#">Курсы</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">О нас</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#">Блог</a></li>
+                <li class="navigation__item navigation__item--more">
+                  <button class="navigation__button" type="button">Еще
+                        <svg width="24" height="24" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#arrow-down"></use>
+                        </svg>
+                  </button>
+                  <ul class="navigation__sub-list">
+                    <li class="navigation__sub-item"><a class="navigation__sub-link" href="#">FAQ</a></li>
+                    <li class="navigation__sub-item"><a class="navigation__sub-link" href="#">Контакты</a></li>
+                    <li class="navigation__sub-item"><a class="navigation__sub-link" href="#">Условия оплаты</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+        <button class="header__login-open button button--primary" type="button">Войти</button>
+        <button class="header__menu-open" type="button" aria-expanded="false"><span class="visually-hidden">Меню</span><span></span><span></span><span></span></button>
       </div>
-      <button class="header__login" href="#"><span>Войти</span></button>
-      <button class="nav__menu" type="button">
-        <div class="nav__wrapper-menu"><span></span></div>
-      </button>
     </header>
     <main class="main">
       <section class="main__container container">

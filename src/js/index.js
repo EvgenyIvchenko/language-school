@@ -5,12 +5,11 @@ import { defocusButton } from './modules/defocus-button.js';
 import { initLinkScroll } from './modules/init-link-scroll.js';
 import { initPhoneMask } from './modules/init-phone-mask.js';
 import { initPhoneHref } from './modules/init-phone-href.js';
-import { burgerMenu } from './modules/burger-menu.js';
-
+import { initMenu } from './modules/init-menu.js';
 
 testSupportWebp();
 defocusButton();
 initPhoneHref();
 initLinkScroll();
 initPhoneMask();
-burgerMenu();
+initMenu();
