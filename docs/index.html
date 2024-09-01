@@ -50,20 +50,44 @@
       </div>
     </header>
     <main class="main">
-      <section class="main__container container">
-        <div><img src="img/content/student.webp" width="288" height="200" alt="Ученик за ноутбуком"></div>
-        <p>Language to go</p>
-        <p>Онлайн-школа иностранных языков</p>
-        <p>Достигайте своих целей с помощью авторских игровых методик от носителей языка</p><a href="#">Попробовать бесплатно</a><a href="#">
-          <div>
-                <svg width="60" height="60" aria-hidden="true">
-                  <use xlink:href="img/sprite.svg#play-video"></use>
-                </svg>
+      <section class="preview">
+        <div class="preview-container container">
+          <div class="preview__student-pic">
+            <picture>
+              <source media="(min-width: 1280px)" srcset="img/content/student-desktop.webp" type="image/webp">
+              <source media="(min-width: 768px)" srcset="img/content/student-tablet.webp" type="image/webp">
+              <source srcset="img/content/student-mobile.webp" type="image/webp">
+              <source media="(min-width: 1280px)" srcset="img/content/student-desktop.png">
+              <source media="(min-width: 768px)" srcset="img/content/student-tablet.png"><img src="img/content/student-mobile.png" width="288" height="200" alt="Ученик за ноутбуком">
+            </picture>
           </div>
-          <p>Посмотреть промо-ролик</p></a>
+          <div class="preview__discription-wrapper">
+            <p class="preview__school-name">Language to go</p>
+            <h1 class="preview__discription">Онлайн-школа иностранных языков</h1>
+            <p class="preview__text">Достигайте своих целей с помощью авторских игровых методик от носителей языка</p>
+          </div>
+          <div class="preview__buttons-wrapper"><a class="preview__try-free button button--second" href="#">Попробовать бесплатно</a>
+            <div class="preview__watch-promo">
+              <button class="preview__play-promo" type="button">
+                    <svg width="20" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#play-promo"></use>
+                    </svg>
+              </button>
+              <p class="preview__text-promo">Посмотреть промо-ролик</p>
+            </div>
+          </div>
+          <div class="preview__player-wrapper">
+            <div class="preview__player-container">
+              <div class="preview__player-frame">
+                <iframe id="video" src="https://www.youtube.com/embed/5JEbc51kgLo?enablejsapi=1&amp;html5=1" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="footer"></footer>
+    <script src="js/yt-api.js"></script>
     <script src="js/bundle.min.js"></script>
   </body>
 </html>

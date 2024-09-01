@@ -1,1 +1,1 @@
-export const isEscEvent = (e) => e.key === 'Escape' || e.key === 'Esc';
+export const isEscKey = (e) => e.key === 'Escape' || e.keyCode === 27;
