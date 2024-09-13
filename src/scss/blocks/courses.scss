@@ -1,0 +1,53 @@
+.courses {}
+
+.courses__container {
+	display: grid;
+	align-items: flex-start;
+
+	@include tablet {
+		grid-template-areas: "a c" "b b";
+	}
+}
+
+.courses__heading {
+	margin: 0;
+	margin-bottom: 30px;
+	max-width: 360px;
+	font-weight: 900;
+	font-size: 24px;
+	line-height: 133%;
+	color: var(--title);
+
+	@include tablet {
+		grid-area: a;
+		margin-bottom: 60px;
+		max-width: 450px;
+		font-size: 32px;
+		line-height: 131%;
+	}
+
+	@include desktop {
+		max-width: 700px;
+		font-size: 46px;
+		line-height: 117%;
+		letter-spacing: .01em;
+	}
+}
+
+.courses__slider-wrapper {}
+
+.courses__card-slider {
+	@include tablet {
+		grid-area: b;
+	}
+}
+
+.courses__all-courses {
+	@include tablet {
+		align-self: end;
+		justify-self: end;
+		grid-area: c;
+		margin-bottom: 60px;
+		max-width: 114px;
+	}
+}

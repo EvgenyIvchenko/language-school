@@ -1,0 +1,19 @@
+mixin courses(data)
+	div.card-slider__container.swiper&attributes(attributes)
+		div.card-slider__wrapper.swiper-wrapper
+			each card in data.courses
+				div.card-slider__card.swiper-slide(class=`card-slider__card--${card.lang}`)
+					div.card-slider__flag
+						picture
+							source(srcset=`img/content/${card.lang}.webp` type="image/webp")
+							img(src=`img/content/${card.lang}.png` width="50" height="50" alt="country-flag")
+					h2.card-slider__heading!= card.heading
+					p.card-slider__duration Длительность: #[span #{card.duration}]#[br/]Модулей: #[span #{card.modules}]
+					div.card-slider__price-wrap
+						a.card-slider__learn-more #[span.card-slider__more-primary Подробнее]#[span.card-slider__more-secondary Узнать подробнее]
+							+icon(20, 20, "arrow-right")
+						p.card-slider__price!= card.price
+		//- div.swiper-button-prev
+		//- div.swiper-button-next
+		//- div.swiper-pagination
+		div.card-slider__scrollbar.swiper-scrollbar

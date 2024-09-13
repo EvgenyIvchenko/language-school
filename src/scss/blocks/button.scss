@@ -80,3 +80,18 @@
 	position: absolute;
 	margin-top: 60px;
 }
+
+.button-transparent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid var(--purple);
+	border-radius: 8px;
+	padding: 12px 16px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	letter-spacing: .01em;
+	color: var(--purple);
+	background-color: #fff;
+}

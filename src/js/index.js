@@ -6,7 +6,7 @@ import { initLinkScroll } from './modules/init-link-scroll.js';
 import { initPhoneMask } from './modules/init-phone-mask.js';
 import { initPhoneHref } from './modules/init-phone-href.js';
 import { initMenu } from './modules/init-menu.js';
-// import { playPromo } from './modules/play-promo.js';
+import { initSwiper } from './modules/init-swiper.js';
 
 testSupportWebp();
 defocusButton();
@@ -14,4 +14,4 @@ initPhoneHref();
 initLinkScroll();
 initPhoneMask();
 initMenu();
-// playPromo();
+initSwiper();

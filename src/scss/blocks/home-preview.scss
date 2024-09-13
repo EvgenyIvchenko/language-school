@@ -1,10 +1,10 @@
-.preview {
+.home-preview {
 	display: grid;
 	margin-bottom: 58px;
 	padding-top: 64px;
 
 	@include tablet {
-		margin-bottom: 90px;
+		margin-bottom: 88px;
 	}
 
 	@include desktop {
@@ -12,7 +12,7 @@
 	}
 }
 
-.preview-container {
+.home-preview__container {
 	display: grid;
 	justify-content: center;
 
@@ -20,7 +20,6 @@
 		column-gap: 10px;
 		grid-template-areas: "a b" "a b" "c c";
 		grid-template-columns: 1fr 1fr;
-		max-width: 768px;
 		row-gap: 52px;
 	}
 
@@ -33,7 +32,7 @@
 	}
 }
 
-.preview__student-pic {
+.home-preview__student-pic {
 	display: grid;
 	align-items: center;
 	justify-items: center;
@@ -50,7 +49,7 @@
 	}
 }
 
-.preview__discription-wrapper {
+.home-preview__content-wrapper {
 	display: grid;
 	align-items: center;
 	justify-content: center;
@@ -64,29 +63,12 @@
 
 	@include desktop {
 		justify-content: flex-start;
+		padding-top: 58px;
 	}
 }
 
-.preview__school-name {
-	justify-self: start;
-	margin-bottom: 12px;
-	font-weight: 600;
-	font-size: 14px;
-	letter-spacing: .01em;
-	color: var(--blue);
-
-	@include tablet {
-		margin-bottom: 6px;
-		font-size: 17px;
-	}
-
-	@include desktop {
-		margin-bottom: 15px;
-		font-size: 18px;
-	}
-}
-
-.preview__discription {
+.home-preview__heading {
+	display: grid;
 	margin: 0;
 	margin-bottom: 18px;
 	font-weight: 900;
@@ -107,7 +89,29 @@
 	}
 }
 
-.preview__text {
+.home-preview__heading span {
+	justify-self: start;
+	margin-bottom: 12px;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 14px;
+	letter-spacing: .01em;
+	color: var(--blue);
+
+	@include tablet {
+		margin-bottom: 6px;
+		font-size: 17px;
+		line-height: 17px;
+	}
+
+	@include desktop {
+		margin-bottom: 15px;
+		font-size: 18px;
+		line-height: 18px;
+	}
+}
+
+.home-preview__text {
 	line-height: 24px;
 	letter-spacing: .02em;
 	color: var(--grey);
@@ -124,10 +128,10 @@
 	}
 }
 
-.preview__buttons-wrapper {
+.home-preview__buttons-wrapper {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: flex-start;
 	width: 100%;
 	gap: 16px;
 
@@ -138,33 +142,32 @@
 
 	@include desktop {
 		align-items: center;
-		justify-content: flex-start;
+		margin-bottom: 58px;
 	}
 }
 
-.preview__try-free {}
+.home-preview__try-free {}
 
-.preview__watch-promo {
+.home-preview__watch-promo {
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
 	gap: 12px;
 }
 
-.preview__play-promo {
+.home-preview__play-promo {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-	padding: 18px 18px 18px 22px;
-	background-color: var(--red-secondry);
+	padding-right: 10px;
+	gap: 12px;
 
 	svg {
 		fill: var(--red-focus);
 	}
 
 	&:active {
-		background-color: var(--red-hover);
+		.home-preview__play-icon {
+			background-color: var(--red-hover);
+		}
 	}
 
 	@include hover {
@@ -174,14 +177,23 @@
 	}
 }
 
-.preview__text-promo {
+.home-preview__play-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	padding: 18px 18px 18px 22px;
+	background-color: var(--red-secondry);
+}
+
+.home-preview__text-promo {
 	line-height: 24px;
 	letter-spacing: .02em;
 	text-align: center;
 	color: var(--text);
 }
 
-.preview__player-wrapper {
+.home-preview__player-wrapper {
 	position: absolute;
 	inset: 0;
 	display: flex;
@@ -199,7 +211,7 @@
 	}
 }
 
-.preview__player-container {
+.home-preview__player-container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -208,7 +220,7 @@
 	max-width: 1280px;
 }
 
-.preview__player-frame {
+.home-preview__player-frame {
 	position: relative;
 	padding-top: 56.25%;
 	width: 100%;

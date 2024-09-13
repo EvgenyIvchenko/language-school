@@ -13,7 +13,13 @@
 	"blocks/button",
 	// блоки
 	"blocks/header",
-	"blocks/navigation",
 	// "blocks/footer",
+	"blocks/navigation",
 	"blocks/main",
-	"blocks/preview";
+	"blocks/home-preview",
+	"../../node_modules/swiper/swiper.scss",
+	"../../node_modules/swiper/modules/navigation.scss",
+	"../../node_modules/swiper/modules/pagination.scss",
+	"../../node_modules/swiper/modules/scrollbar.scss",
+	"blocks/card-slider",
+	"blocks/courses";

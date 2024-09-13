@@ -1,13 +1,13 @@
-let player;
+const wrapperElement = document.querySelector('.home-preview__player-wrapper');
+const containerElement = document.querySelector('.home-preview__player-container');
+const buttonElement = document.querySelector('.home-preview__play-promo');
 
-const wrapperElement = document.querySelector('.preview__player-wrapper');
-const containerElement = document.querySelector('.preview__player-container');
-const buttonElement = document.querySelector('.preview__play-promo');
+let player;
 
 function onEscPress(e) {
 	if (e.keyCode === 27) {
 		player.stopVideo();
-		wrapperElement.classList.remove('preview__player-wrapper--active');
+		wrapperElement.classList.remove('home-preview__player-wrapper--active');
 		wrapperElement.removeEventListener('click', onLayoutClick);
 		document.removeEventListener('keydown', onEscPress);
 	}
@@ -16,7 +16,7 @@ function onEscPress(e) {
 function onLayoutClick(e) {
 	if (!containerElement.contains(e.target)) {
 		player.stopVideo();
-		wrapperElement.classList.remove('preview__player-wrapper--active');
+		wrapperElement.classList.remove('home-preview__player-wrapper--active');
 		wrapperElement.removeEventListener('click', onLayoutClick);
 		document.removeEventListener('keydown', onEscPress);
 	}
@@ -33,7 +33,7 @@ function onYouTubePlayerAPIReady() {
 function onPlayerReady() {
 	buttonElement.addEventListener('click', (e) => {
 		e.preventDefault();
-		wrapperElement.classList.add('preview__player-wrapper--active');
+		wrapperElement.classList.add('home-preview__player-wrapper--active');
 		wrapperElement.addEventListener('click', onLayoutClick);
 		document.addEventListener('keydown', onEscPress);
 	});

@@ -1,6 +1,6 @@
-section.preview
-	div.preview-container.container
-		div.preview__student-pic
+section.home-preview
+	div.home-preview__container.container
+		div.home-preview__student-pic
 			picture
 				source(media="(min-width: 1280px)" srcset="img/content/student-desktop.webp" type="image/webp")
 				source(media="(min-width: 768px)" srcset="img/content/student-tablet.webp" type="image/webp")
@@ -8,17 +8,16 @@ section.preview
 				source(media="(min-width: 1280px)" srcset="img/content/student-desktop.png")
 				source(media="(min-width: 768px)" srcset="img/content/student-tablet.png")
 				img(src="img/content/student-mobile.png" width="288" height="200" alt="Ученик за ноутбуком")
-		div.preview__discription-wrapper
-			p.preview__school-name Language to go
-			h1.preview__discription Онлайн-школа иностранных языков
-			p.preview__text Достигайте своих целей с помощью авторских игровых методик от носителей языка
-		div.preview__buttons-wrapper
-			a.preview__try-free.button.button--second(href="#") Попробовать бесплатно
-			div.preview__watch-promo
-				button.preview__play-promo(type="button")
+		div.home-preview__content-wrapper
+			h1.home-preview__heading #[span Language To go]Онлайн-школа иностранных языков
+			p.home-preview__text Достигайте своих целей с помощью авторских игровых методик от носителей языка
+		div.home-preview__buttons-wrapper
+			a.home-preview__try-free.button.button--second(href="#") Попробовать бесплатно
+			button.home-preview__play-promo(type="button")
+				span.home-preview__play-icon
 					+icon(20, 24, 'play-promo')
-				p.preview__text-promo Посмотреть промо-ролик
-		div.preview__player-wrapper
-			div.preview__player-container
-				div.preview__player-frame
+				span.home-preview__text-promo Посмотреть промо-ролик
+		div.home-preview__player-wrapper
+			div.home-preview__player-container
+				div.home-preview__player-frame
 					iframe(id="video" src="https://www.youtube.com/embed/5JEbc51kgLo?enablejsapi=1&html5=1" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen)

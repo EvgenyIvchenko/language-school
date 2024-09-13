@@ -50,9 +50,9 @@
       </div>
     </header>
     <main class="main">
-      <section class="preview">
-        <div class="preview-container container">
-          <div class="preview__student-pic">
+      <section class="home-preview">
+        <div class="home-preview__container container">
+          <div class="home-preview__student-pic">
             <picture>
               <source media="(min-width: 1280px)" srcset="img/content/student-desktop.webp" type="image/webp">
               <source media="(min-width: 768px)" srcset="img/content/student-tablet.webp" type="image/webp">
@@ -61,28 +61,123 @@
               <source media="(min-width: 768px)" srcset="img/content/student-tablet.png"><img src="img/content/student-mobile.png" width="288" height="200" alt="Ученик за ноутбуком">
             </picture>
           </div>
-          <div class="preview__discription-wrapper">
-            <p class="preview__school-name">Language to go</p>
-            <h1 class="preview__discription">Онлайн-школа иностранных языков</h1>
-            <p class="preview__text">Достигайте своих целей с помощью авторских игровых методик от носителей языка</p>
+          <div class="home-preview__content-wrapper">
+            <h1 class="home-preview__heading"><span>Language To go</span>Онлайн-школа иностранных языков</h1>
+            <p class="home-preview__text">Достигайте своих целей с помощью авторских игровых методик от носителей языка</p>
           </div>
-          <div class="preview__buttons-wrapper"><a class="preview__try-free button button--second" href="#">Попробовать бесплатно</a>
-            <div class="preview__watch-promo">
-              <button class="preview__play-promo" type="button">
+          <div class="home-preview__buttons-wrapper"><a class="home-preview__try-free button button--second" href="#">Попробовать бесплатно</a>
+            <button class="home-preview__play-promo" type="button"><span class="home-preview__play-icon">
                     <svg width="20" height="24" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#play-promo"></use>
-                    </svg>
-              </button>
-              <p class="preview__text-promo">Посмотреть промо-ролик</p>
-            </div>
+                    </svg></span><span class="home-preview__text-promo">Посмотреть промо-ролик</span></button>
           </div>
-          <div class="preview__player-wrapper">
-            <div class="preview__player-container">
-              <div class="preview__player-frame">
+          <div class="home-preview__player-wrapper">
+            <div class="home-preview__player-container">
+              <div class="home-preview__player-frame">
                 <iframe id="video" src="https://www.youtube.com/embed/5JEbc51kgLo?enablejsapi=1&amp;html5=1" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="courses">
+        <div class="courses__container container">
+          <h2 class="courses__heading">Курсы иностранных языков для любого уровня</h2>
+              <div class="card-slider__container swiper courses__card-slider card-slider">
+                <div class="card-slider__wrapper swiper-wrapper">
+                  <div class="card-slider__card swiper-slide card-slider__card--DE">
+                    <div class="card-slider__flag">
+                      <picture>
+                        <source srcset="img/content/DE.webp" type="image/webp"><img src="img/content/DE.png" width="50" height="50" alt="country-flag">
+                      </picture>
+                    </div>
+                    <h2 class="card-slider__heading">Немецкий для начального уровня</h2>
+                    <p class="card-slider__duration">Длительность: <span>45 часов</span><br/>Модулей: <span>3</span></p>
+                    <div class="card-slider__price-wrap"><a class="card-slider__learn-more"><span class="card-slider__more-primary">Подробнее</span><span class="card-slider__more-secondary">Узнать подробнее</span>
+                            <svg width="20" height="20" aria-hidden="true">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg></a>
+                      <p class="card-slider__price">От 6 520 Р</p>
+                    </div>
+                  </div>
+                  <div class="card-slider__card swiper-slide card-slider__card--CN">
+                    <div class="card-slider__flag">
+                      <picture>
+                        <source srcset="img/content/CN.webp" type="image/webp"><img src="img/content/CN.png" width="50" height="50" alt="country-flag">
+                      </picture>
+                    </div>
+                    <h2 class="card-slider__heading">Китайский для среднего уровня</h2>
+                    <p class="card-slider__duration">Длительность: <span>45 часов</span><br/>Модулей: <span>3</span></p>
+                    <div class="card-slider__price-wrap"><a class="card-slider__learn-more"><span class="card-slider__more-primary">Подробнее</span><span class="card-slider__more-secondary">Узнать подробнее</span>
+                            <svg width="20" height="20" aria-hidden="true">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg></a>
+                      <p class="card-slider__price">От 6 520 Р</p>
+                    </div>
+                  </div>
+                  <div class="card-slider__card swiper-slide card-slider__card--ES">
+                    <div class="card-slider__flag">
+                      <picture>
+                        <source srcset="img/content/ES.webp" type="image/webp"><img src="img/content/ES.png" width="50" height="50" alt="country-flag">
+                      </picture>
+                    </div>
+                    <h2 class="card-slider__heading">Испанский для среднего уровня</h2>
+                    <p class="card-slider__duration">Длительность: <span>45 часов</span><br/>Модулей: <span>3</span></p>
+                    <div class="card-slider__price-wrap"><a class="card-slider__learn-more"><span class="card-slider__more-primary">Подробнее</span><span class="card-slider__more-secondary">Узнать подробнее</span>
+                            <svg width="20" height="20" aria-hidden="true">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg></a>
+                      <p class="card-slider__price">От 6 520 Р</p>
+                    </div>
+                  </div>
+                  <div class="card-slider__card swiper-slide card-slider__card--DE">
+                    <div class="card-slider__flag">
+                      <picture>
+                        <source srcset="img/content/DE.webp" type="image/webp"><img src="img/content/DE.png" width="50" height="50" alt="country-flag">
+                      </picture>
+                    </div>
+                    <h2 class="card-slider__heading">Немецкий для начального уровня</h2>
+                    <p class="card-slider__duration">Длительность: <span>45 часов</span><br/>Модулей: <span>3</span></p>
+                    <div class="card-slider__price-wrap"><a class="card-slider__learn-more"><span class="card-slider__more-primary">Подробнее</span><span class="card-slider__more-secondary">Узнать подробнее</span>
+                            <svg width="20" height="20" aria-hidden="true">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg></a>
+                      <p class="card-slider__price">От 6 520 Р</p>
+                    </div>
+                  </div>
+                  <div class="card-slider__card swiper-slide card-slider__card--CN">
+                    <div class="card-slider__flag">
+                      <picture>
+                        <source srcset="img/content/CN.webp" type="image/webp"><img src="img/content/CN.png" width="50" height="50" alt="country-flag">
+                      </picture>
+                    </div>
+                    <h2 class="card-slider__heading">Китайский для среднего уровня</h2>
+                    <p class="card-slider__duration">Длительность: <span>45 часов</span><br/>Модулей: <span>3</span></p>
+                    <div class="card-slider__price-wrap"><a class="card-slider__learn-more"><span class="card-slider__more-primary">Подробнее</span><span class="card-slider__more-secondary">Узнать подробнее</span>
+                            <svg width="20" height="20" aria-hidden="true">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg></a>
+                      <p class="card-slider__price">От 6 520 Р</p>
+                    </div>
+                  </div>
+                  <div class="card-slider__card swiper-slide card-slider__card--ES">
+                    <div class="card-slider__flag">
+                      <picture>
+                        <source srcset="img/content/ES.webp" type="image/webp"><img src="img/content/ES.png" width="50" height="50" alt="country-flag">
+                      </picture>
+                    </div>
+                    <h2 class="card-slider__heading">Испанский для среднего уровня</h2>
+                    <p class="card-slider__duration">Длительность: <span>45 часов</span><br/>Модулей: <span>3</span></p>
+                    <div class="card-slider__price-wrap"><a class="card-slider__learn-more"><span class="card-slider__more-primary">Подробнее</span><span class="card-slider__more-secondary">Узнать подробнее</span>
+                            <svg width="20" height="20" aria-hidden="true">
+                              <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg></a>
+                      <p class="card-slider__price">От 6 520 Р</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-slider__scrollbar swiper-scrollbar"></div>
+              </div><a class="courses__all-courses button-transparent" href="#">Все курсы</a>
         </div>
       </section>
     </main>
