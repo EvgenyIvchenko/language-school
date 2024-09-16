@@ -1739,8 +1739,7 @@ button.swiper-pagination-bullet {
 
 .card-slider__container {
   margin-bottom: 32px;
-  width: 0;
-  min-width: 100%;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .card-slider__container {
@@ -1749,7 +1748,12 @@ button.swiper-pagination-bullet {
 }
 
 .card-slider__wrapper {
-  margin-bottom: 36px;
+  margin-bottom: 44px;
+}
+@media (min-width: 768px) {
+  .card-slider__wrapper {
+    margin-bottom: 70px;
+  }
 }
 
 .card-slider__card {
@@ -1934,6 +1938,39 @@ button.swiper-pagination-bullet {
   line-height: 150%;
   letter-spacing: 0.01em;
   color: var(--title);
+}
+
+.card-slider__pagination {
+  display: none;
+}
+@media (min-width: 768px) {
+  .card-slider__pagination {
+    display: block;
+  }
+}
+.card-slider__pagination .swiper-pagination-bullet {
+  border: 4px solid white;
+  width: 20px;
+  height: 20px;
+  background-color: var(--purple-border);
+}
+.card-slider__pagination .swiper-pagination-bullet-active {
+  outline: 2px solid var(--purple);
+  background-color: var(--purple);
+}
+
+.card-slider__scrollbar {
+  border-radius: 20px;
+  background-color: var(--slider-grey);
+}
+.card-slider__scrollbar .swiper-scrollbar-drag {
+  border-radius: 20px;
+  background-color: var(--purple);
+}
+@media (min-width: 768px) {
+  .card-slider__scrollbar {
+    display: none;
+  }
 }
 
 .courses__container {
