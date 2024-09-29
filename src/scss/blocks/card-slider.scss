@@ -209,6 +209,7 @@
 		width: 20px;
 		height: 20px;
 		background-color: var(--purple-border);
+		opacity: 1;
 	}
 
 	.swiper-pagination-bullet-active {
@@ -228,5 +229,11 @@
 
 	@include tablet {
 		display: none;
+	}
+}
+
+.swiper-pagination-bullet {
+	@include hover {
+		background-color: var(--purple);
 	}
 }

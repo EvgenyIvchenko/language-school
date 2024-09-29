@@ -1,1 +1,70 @@
 footer.footer
+	div.footer__container.container
+		ul.footer__list
+			li.footer__item
+				if isHomePage
+					div.footer__logo
+						img(src="./img/content/logo-footer.svg" width="160" height="56" alt="Языковая школа")
+				else
+					a.footer__logo(href="#!")
+						img(src="./img/content/logo-footer.svg" width="160" height="56" alt="Языковая школа")
+				p.footer__description
+					|Language2Go — интерактивная платформа для легкого, удобного и быстрого изучения иностранных языков.
+				ul.footer__payments-list
+					li.footer__payment-item
+						picture
+							source(media="(min-width: 768px)" srcset="img/static/visa.webp" type="image/webp")
+							img(src="img/static/visa.png" width="47" height="15" alt="Логотип платежной системы Visa")
+					li.footer__payment-item
+						picture
+							source(media="(min-width: 768px)" srcset="img/static/master-card.webp" type="image/webp")
+							img(src="img/static/master-card.png" width="29" height="23" alt="Логотип платежной системы Mastercard")
+					li.footer__payment-item
+						picture
+							source(media="(min-width: 768px)" srcset="img/static/mir.webp" type="image/webp")
+							img(src="img/static/mir.png" width="55" height="15" alt="Логотип платежной системы МИР")
+			li.footer__item
+				h4.footer__heading Контакты
+				div.footer__contacts-wrap
+					a.footer__contacts-tel(href="tel:+74951563550") +7 (495) 156-35-50
+					div.footer__mail-wrap
+						a.footer__contacts-mail(href="mailto:info@language2go.ru") info@language2go.ru
+						a.footer__contacts-mail(href="mailto:support@language2go.ru") support@language2go.ru
+					a.footer__contacts-address(href="#") 101000, Москва, Россия
+					ul.footer__socials-list
+						li.footer__socials-item
+							a.footer__socials-link(href="#")
+								+icon(24, 24, "facebook")
+						li.footer__socials-item
+							a.footer__socials-link(href="#")
+								+icon(24, 24, "youtube")
+						li.footer__socials-item
+							a.footer__socials-link(href="#")
+								+icon(24, 24, "vk")
+						li.footer__socials-item
+							a.footer__socials-link(href="#")
+								+icon(24, 24, "twitter")
+			li.footer__item
+				h4.footer__heading Информация
+				div.footer__info-wrap
+					a.footer__info-link(href="#") О нас
+					a.footer__info-link(href="#") Отзывы
+					a.footer__info-link(href="#") Новости
+					a.footer__info-link(href="#") Частые вопросы
+					a.footer__info-link(href="#") Условия оплаты
+					a.footer__info-link(href="#") Контакты
+			li.footer__item
+				h4.footer__heading Обучение
+				div.footer__education-wrap
+					a.footer__info-link(href="#") Все языки
+					a.footer__info-link(href="#") Взрослым
+					a.footer__info-link(href="#") Детям и подросткам
+					a.footer__info-link(href="#") Мини-курсы
+					a.footer__info-link(href="#") Тренажеры
+					a.footer__info-link(href="#") Индивидуальные занятия
+	div.footer__agreement-wrapper
+		div.footer__agreement-container.container
+			a.footer__agrement-link(href="#") © 2022 Language to go
+			a.footer__agrement-link(href="#") Правовая оговорка
+			a.footer__agrement-link(href="#") Политика конфиденциальности
+			a.footer__agrement-link(href="#") Пользовательское соглашение

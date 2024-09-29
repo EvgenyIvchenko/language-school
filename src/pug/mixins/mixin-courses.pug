@@ -10,7 +10,7 @@ mixin courses(data)
 					h2.card-slider__heading!= card.heading
 					p.card-slider__duration Длительность: #[span #{card.duration}]#[br/]Модулей: #[span #{card.modules}]
 					div.card-slider__price-wrap
-						a.card-slider__learn-more #[span.card-slider__more-primary Подробнее]#[span.card-slider__more-secondary Узнать подробнее]
+						a.card-slider__learn-more(href=`${card.link}`) #[span.card-slider__more-primary Подробнее]#[span.card-slider__more-secondary Узнать подробнее]
 							+icon(20, 20, "arrow-right")
 						p.card-slider__price!= card.price
 		div.card-slider__pagination.swiper-pagination

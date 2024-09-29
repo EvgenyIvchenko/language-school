@@ -1,4 +1,14 @@
-.courses {}
+.courses {
+	margin-bottom: 60px;
+
+	@include tablet {
+		margin-bottom: 80px;
+	}
+
+	@include desktop {
+		margin-bottom: 100px;
+	}
+}
 
 .courses__container {
 	display: grid;

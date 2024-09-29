@@ -94,4 +94,16 @@
 	letter-spacing: .01em;
 	color: var(--purple);
 	background-color: #fff;
+	transition: all .3s ease-in-out;
+
+	&:active {
+		border-color: var(--purple-active);
+		color: var(--purple-active);
+	}
+
+	@include hover {
+		border-color: var(--purple-hover);
+		color: var(--purple-hover);
+		background-color: var(--purple-secondary);
+	}
 }
