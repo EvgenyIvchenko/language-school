@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -2382,6 +2383,7 @@ button.swiper-pagination-bullet {
 }
 
 .reasons__heading {
+  margin-top: 0;
   margin-bottom: 44px;
   font-weight: 900;
   font-size: 24px;
@@ -2553,7 +2555,7 @@ button.swiper-pagination-bullet {
     max-width: 578px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px){
   .home-preview__student-pic {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
@@ -2622,7 +2624,7 @@ button.swiper-pagination-bullet {
     -ms-grid-column-span: 2;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1280px){
   .home-preview__student-pic {
     -ms-grid-row: 1;
     -ms-grid-row-span: 5;
@@ -2745,6 +2747,113 @@ button.swiper-pagination-bullet {
     line-height: 133%;
     letter-spacing: 0.01em;
   }
+}
+
+.discount {
+  display: grid;
+  margin-bottom: 60px;
+}
+@media (min-width: 768px) {
+  .discount {
+    margin-bottom: 80px;
+  }
+}
+@media (min-width: 1280px) {
+  .discount {
+    margin-bottom: 100px;
+  }
+}
+
+.discount__container {
+  display: grid;
+}
+
+.discount__wrap {
+  display: grid;
+  border-radius: 10px;
+  padding: 24px 16px;
+  background-color: var(--purple-secondary);
+}
+
+.discount__heading {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 133%;
+  color: var(--title);
+}
+@media (min-width: 768px) {
+  .discount__heading {
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 131%;
+  }
+}
+@media (min-width: 1280px) {
+  .discount__heading {
+    font-size: 46px;
+    line-height: 117%;
+    letter-spacing: 0.01em;
+  }
+}
+
+.discount__checker {
+  position: absolute;
+  opacity: 0;
+}
+.discount__checker:checked ~ .discount__read-more::after {
+  content: "свернуть";
+}
+.discount__checker:checked ~ .discount__content {
+  max-height: none;
+}
+.discount__checker:checked ~ .discount__content .discount__damper {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.discount__content {
+  position: relative;
+  overflow: hidden;
+  max-height: 92px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.01em;
+  color: var(--text);
+}
+@media (min-width: 768px) {
+  .discount__content {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+  }
+}
+
+.discount__damper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(239, 239, 255, 0), rgb(239, 239, 255) 80%);
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.discount__read-more {
+  display: inline-block;
+  justify-self: end;
+  padding: 10px;
+  width: 100px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: underline;
+  color: var(--title);
+  cursor: pointer;
+}
+.discount__read-more::after {
+  content: "развернуть";
 }
 
 .questions {
