@@ -209,6 +209,10 @@
 	opacity: .8;
 	row-gap: 8px;
 
+	@include hover {
+		text-decoration: underline;
+	}
+
 	@include tablet {
 		font-size: 16px;
 		line-height: 150%;

@@ -5,18 +5,11 @@ block meta
 	title Language to go
 	meta(name="description" content="сайт")
 block content
-	include ./includes/preview
+	include ./includes/home-preview
 	include ./includes/courses
 	include ./includes/reasons
 	include ./includes/discount
 	include ./includes/questions
 block prepend page-bottom
+	include ./includes/yt-modal
 	script(src="js/yt-api.js")
-
-//- picture
-//- 	source(media="(min-width: 1280px)" srcset="img/content/student-desktop.webp" type="image/webp")
-//- 	source(media="(min-width: 768px)" srcset="img/content/student-tablet.webp" type="image/webp")
-//- 	source(srcset="img/content/student-mobile.webp" type="image/webp")
-//- 	source(media="(min-width: 1280px)" srcset="img/content/student-desktop.png")
-//- 	source(media="(min-width: 768px)" srcset="img/content/student-tablet.png")
-//- 	img(src="img/content/student-mobile.png" width="288" height="200" alt="Ученик за ноутбуком")

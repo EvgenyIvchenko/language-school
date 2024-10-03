@@ -18,7 +18,6 @@ export const path = {
 		html: `${srcFolder}/pug/*.pug`,
 		css: `${srcFolder}/scss/style.scss`,
 		js: `${srcFolder}/js/index.js`,
-		switcher: `${srcFolder}/js/switcher.js`,
 		ytapi: `${srcFolder}/js/yt-api.js`,
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,webp}`,
 		svg: `${srcFolder}/img/**/*.svg`,

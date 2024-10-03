@@ -6,7 +6,6 @@ import { html } from './gulp/tasks/html.js';
 import { server } from './gulp/tasks/server.js';
 import { css } from './gulp/tasks/css.js';
 import { js } from './gulp/tasks/js.js';
-import { switcher } from './gulp/tasks/switcher.js';
 import { ytapi } from './gulp/tasks/yt-api.js';
 import { images } from './gulp/tasks/images.js';
 import { sprite } from './gulp/tasks/sprite.js';
@@ -25,7 +24,6 @@ const watcher = () => {
 	gulp.watch(path.watch.html, html);
 	gulp.watch(path.watch.css, css);
 	gulp.watch(path.watch.js, js);
-	gulp.watch(path.watch.js, switcher);
 	gulp.watch(path.watch.js, ytapi);
 	gulp.watch(path.watch.images, images);
 	gulp.watch(path.watch.sprite, sprite);
@@ -36,7 +34,6 @@ const mainTasks = gulp.parallel(
 	html,
 	css,
 	js,
-	switcher,
 	ytapi,
 	images,
 	sprite,
