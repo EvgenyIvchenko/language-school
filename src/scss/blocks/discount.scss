@@ -43,24 +43,6 @@
 	}
 }
 
-.discount__checker {
-	position: absolute;
-	opacity: 0;
-
-	&:checked ~ .discount__read-more::after {
-		content: "свернуть";
-	}
-
-	&:checked ~ .discount__content {
-		max-height: none;
-	}
-
-	&:checked ~ .discount__content .discount__damper {
-		opacity: 0;
-		transition: all .2s ease-in-out;
-	}
-}
-
 .discount__content {
 	position: relative;
 	overflow: hidden;
@@ -70,6 +52,7 @@
 	line-height: 143%;
 	letter-spacing: .01em;
 	color: var(--text);
+	transition: max-height .2s ease-out;
 
 	@include tablet {
 		font-size: 16px;
@@ -85,7 +68,6 @@
 	height: 60px;
 	background: linear-gradient(to bottom, rgb(239 239 255 / 0%), rgb(239 239 255 / 100%) 80%);
 	opacity: 1;
-	transition: all .2s ease-in-out;
 }
 
 .discount__read-more {
@@ -101,5 +83,22 @@
 
 	&::after {
 		content: "развернуть";
+	}
+}
+
+.discount__checker {
+	position: absolute;
+	opacity: 0;
+
+	&:checked ~ .discount__read-more::after {
+		content: "свернуть";
+	}
+
+	&:checked ~ .discount__content {
+		max-height: 100%;
+	}
+
+	&:checked ~ .discount__content .discount__damper {
+		opacity: 0;
 	}
 }

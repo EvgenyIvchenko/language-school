@@ -624,14 +624,16 @@ input[type=radio].visually-hidden {
 }
 .header__menu-open[aria-expanded=false] span {
   left: 2px;
+  border-radius: 2px;
+  transition: all 0.2s ease;
 }
-.header__menu-open[aria-expanded=false] span:nth-child(2) {
+.header__menu-open[aria-expanded=false] span:nth-child(1) {
   top: 5px;
 }
-.header__menu-open[aria-expanded=false] span:nth-child(3) {
+.header__menu-open[aria-expanded=false] span:nth-child(2) {
   top: 13px;
 }
-.header__menu-open[aria-expanded=false] span:nth-child(4) {
+.header__menu-open[aria-expanded=false] span:nth-child(3) {
   top: 21px;
 }
 .header__menu-open[aria-expanded=true] {
@@ -641,15 +643,16 @@ input[type=radio].visually-hidden {
   top: 50%;
   left: 50%;
   border-radius: 2px;
+  transition: all 0.2s ease;
 }
-.header__menu-open[aria-expanded=true] span:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-.header__menu-open[aria-expanded=true] span:nth-child(3) {
+.header__menu-open[aria-expanded=true] span:nth-child(1) {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-.header__menu-open[aria-expanded=true] span:nth-child(4) {
+.header__menu-open[aria-expanded=true] span:nth-child(2) {
   display: none;
+}
+.header__menu-open[aria-expanded=true] span:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 @media (min-width: 1280px) {
   .header__menu-open {
@@ -2803,21 +2806,6 @@ button.swiper-pagination-bullet {
   }
 }
 
-.discount__checker {
-  position: absolute;
-  opacity: 0;
-}
-.discount__checker:checked ~ .discount__read-more::after {
-  content: "свернуть";
-}
-.discount__checker:checked ~ .discount__content {
-  max-height: none;
-}
-.discount__checker:checked ~ .discount__content .discount__damper {
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-}
-
 .discount__content {
   position: relative;
   overflow: hidden;
@@ -2827,6 +2815,7 @@ button.swiper-pagination-bullet {
   line-height: 143%;
   letter-spacing: 0.01em;
   color: var(--text);
+  transition: max-height 0.2s ease-out;
 }
 @media (min-width: 768px) {
   .discount__content {
@@ -2843,7 +2832,6 @@ button.swiper-pagination-bullet {
   height: 60px;
   background: linear-gradient(to bottom, rgba(239, 239, 255, 0), rgb(239, 239, 255) 80%);
   opacity: 1;
-  transition: all 0.2s ease-in-out;
 }
 
 .discount__read-more {
@@ -2859,6 +2847,20 @@ button.swiper-pagination-bullet {
 }
 .discount__read-more::after {
   content: "развернуть";
+}
+
+.discount__checker {
+  position: absolute;
+  opacity: 0;
+}
+.discount__checker:checked ~ .discount__read-more::after {
+  content: "свернуть";
+}
+.discount__checker:checked ~ .discount__content {
+  max-height: 100%;
+}
+.discount__checker:checked ~ .discount__content .discount__damper {
+  opacity: 0;
 }
 
 .questions {
